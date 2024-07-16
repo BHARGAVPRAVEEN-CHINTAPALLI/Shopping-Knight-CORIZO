@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            grid-gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .product {
+            border: 1px solid #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .price {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            margin-top: 10px;
+            background-color: #1e5fa4;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+            </div>
+            <div class="sing_in_up ">
+                <a href="login.html">SIGN UP / LOGIN</a>
+                <span class="logout" onclick="logout()">Logout</span>              
+            </div>
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+            </ul>
+            <div class="logo">
+                <h1 style="padding-left: 30px;">SHOPPING KNIGHT</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="product">
+            <img src="./img/shoes.webp" alt="PS England Shoes">
+            <h3>PS England Shoes</h3>
+            <p class="price">$37.24</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Shoes', ' 37.24', 'shoes.jpg')">Add to Cart</button>       
+         </div>
+        <div class="product">
+            <img src="./img/jacket.webp" alt="PS England Jacket">
+            <h3>PS England Jacket</h3>
+            <p class="price">$17.24</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Jacket', ' 17.24', 'jacket.jpg')">Add to Cart</button>       
+        </div>
+        <div class="product">
+            <img src="./img/shirt.webp" alt="PS England Shirt">
+            <h3>PS England Shirt</h3>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Shirt', ' 29.99', 'shirt.jpg')">Add to Cart</button>       
+
+        </div>
+        <div class="product">
+            <img src="./img/sneak.webp" alt="PS England Shoes">
+            <h3>PS England Shoes</h3>
+            <p class="price">$34.99</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Shoes', ' 34.99', 'sneak.jpg')">Add to Cart</button>       
+        </div>
+        <!-- Row 2 -->
+        <div class="product">
+            <img src="./img/tshirt.webp" alt="PS England T-Shirt">
+            <h3>PS England T-Shirt</h3>
+            <p class="price">$10.23</p>
+            <button class="add-to-cart" onclick="addToCart('PS England T-Shirt', ' 10.23', 'tshirt.jpg')">Add to Cart</button>       
+        </div>
+        <div class="product">
+            <img src="./img/bag.webp" alt="PS England Bag">
+            <h3>PS England Bag</h3>
+            <p class="price">$09.28</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Bag', ' 09.28', 'bag.jpg')">Add to Cart</button>       
+        </div>
+        <div class="product">
+            <img src="./img/sun.webp" alt="PS England Sunglass">
+            <h3>PS England Sunglass</h3>
+            <p class="price">$06.24</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Sunglass', ' 06.24', 'sun.jpg')">Add to Cart</button>        </div>
+        <div class="product">
+            <img src="./img/sweat.webp" alt="H&M SWEATSHIRT">
+            <h3>H&M SWEATSHIRT</h3>
+            <p class="price">$43.67</p>
+            <button class="add-to-cart" onclick="addToCart('H&M SWEATSHIRT', ' 43.67', 'sweat.jpg')">Add to Cart</button>        </div>
+        <!-- Row 3 -->
+        <div class="product">
+            <img src="./img/s1.webp" alt="PS England Shoes white">
+            <h3>PS England Shoes white</h3>
+            <p class="price">$37.24</p>
+            <button class="add-to-cart" onclick="addToCart('PS England Shoes white', ' 37.24', 's1.jpg')">Add to Cart</button>        </div>
+        <div class="product">
+            <img src="./img/ts2.webp" alt="PS England T-Shirt orange">
+            <h3>PS England T-Shirt orange</h3>
+            <p class="price">$67.23</p>
+            <button class="add-to-cart" onclick="addToCart('PS England T-Shirt orange', ' 67.23', 'ts2.jpg')">Add to Cart</button>        </div>
+        <div class="product">
+            <img src="./img/ts3.webp" alt="PS England T-Shirt white">
+            <h3>PS England T-Shirt white</h3>
+            <p class="price">$70.24</p>
+            <button class="add-to-cart" onclick="addToCart('PS England T-Shirt white', ' 70.24', 'ts3.jpg')">Add to Cart</button>        </div>
+        <div class="product">
+            <img src="./img/h1.webp" alt="PS England HandBag">
+            <h3>PS England HandBag</h3>
+            <p class="price">$65.28</p>
+            <button class="add-to-cart" onclick="addToCart('PS England HandBag', ' 65.28', 'h1.jpg')">Add to Cart</button>        </div>
+    </div>
+
+    <script>
+        function addToCart(name, price, image) {
+            // Get existing cart items from localStorage or initialize an empty array
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Add new item to cart
+            cartItems.push({name: name, price: price, image: image});
+
+            // Store updated cart items back to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            // Redirect to cart display page
+            window.location.href = 'cart.html';
+        }
+
+        function logout() {
+            // Display a pop-up message
+            alert('Successfully logged out');
+          }
+    </script>
+</body>
+</html>

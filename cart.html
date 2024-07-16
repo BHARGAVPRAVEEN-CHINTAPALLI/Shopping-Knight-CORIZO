@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shops.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+            <div class="logo">
+                <h1 style="padding-left: 30px;">SHOPPING KNIGHT</h1>
+            </div>
+        </div>
+    </nav>
+
+    <div id="cart-container">
+        <h1>Cart</h1>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <p>Total Amount: <span id="total-amount">$0.00</span></p>
+        <button onclick="clearCart()">Clear Cart</button>
+        <input type="text" class="address-input" id="address" placeholder="Enter your address">
+        <button class="cod-button" onclick="placeOrder()">Cash-on-Delivery</button>
+    </div>
+
+    <!-- JavaScript code to fetch cart items and display them -->
+    <script>
+        // Function to display cart items
+        function displayCart() {
+            
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let cartContainer = document.getElementById('cart-items');
+            let totalAmount = 0;
+
+            cartContainer.innerHTML = ''; // Clear previous items
+
+            cartItems.forEach(item => {
+                let productDiv = document.createElement('div');
+                productDiv.classList.add('item');
+                productDiv.innerHTML = `
+                    <h3>${item.name}</h3>
+                    <p>$${item.price}</p>
+                    <button onclick="removeFromCart('${item.name}')">Remove</button>
+                `;
+                cartContainer.appendChild(productDiv);
+
+                totalAmount += parseFloat(item.price); // Convert price to number and add to total
+            });
+
+            document.getElementById('total-amount').textContent = `$${totalAmount.toFixed(2)}`;
+        }
+
+        // Function to remove item from cart
+        function removeFromCart(name) {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let removed = false;
+
+            for (let i = 0; i < cartItems.length; i++) {
+                if (cartItems[i].name === name && !removed) {
+                    cartItems.splice(i, 1); // Remove only the first instance
+                    removed = true;
+                }
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            displayCart(); // Update cart display
+        }
+
+        // Function to clear cart
+        function clearCart() {
+            localStorage.removeItem('cartItems');
+            displayCart(); // Update cart display
+        }
+
+        // Function to place the order (for cash on delivery)
+        function placeOrder() {
+            const address = document.getElementById('address').value.trim();
+            if (address === '') {
+                alert('Please enter your address');
+            } else {
+                alert("Order placed successfully!");
+                clearCart(); // Clear the cart after placing the order
+            }
+        }
+
+        // Display cart items when page loads
+        document.addEventListener('DOMContentLoaded', displayCart);
+    </script>
+</body>
+</html>
