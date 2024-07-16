@@ -19,3 +19,27 @@ Personalized user experience: Create an account and enjoy personalized features 
 Responsive customer support: Have questions or need help? Our customer support section provides easy access to frequently asked questions and communication options so you can get the help you need as quickly as possible. 
 
 soon: Stay tuned as we finalize our backend integration, which will deliver a full-featured shopping experience, including a secure payment gateway and real-time order tracking. Thank you for visiting Shopping Knight. We look forward to meeting all your shopping needs with our official launch. In the meantime, take a look at the demo version of the interface and give us feedback to help us improve it.
+
+
+Sample Images of Webpages
+
+
+![1](https://github.com/user-attachments/assets/9d4a0d7d-b96c-47db-9075-b260d4ffbeea)
+
+![2](https://github.com/user-attachments/assets/346fa385-4c81-4cc6-93c5-caf7b16fd4d2)
+
+
+![3](https://github.com/user-attachments/assets/5a1ee338-fb7e-42b5-a5bb-6de883d2e0a0)
+
+
+![4](https://github.com/user-attachments/assets/e112f4b8-a700-46f0-bbd4-ed942f5a1339)
+
+
+![5](https://github.com/user-attachments/assets/4a5732f2-0028-48a1-984b-964686cc2b33)
+
+
+![6](https://github.com/user-attachments/assets/c2966156-a759-4044-9d25-4b6b2de7b7d8)
+
+
+![7](https://github.com/user-attachments/assets/00acec72-f100-4e08-adfd-fc55828713c5)
+
