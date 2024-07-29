@@ -16,7 +16,7 @@ Interactive shopping cart. Our shopping cart interface is designed for convenien
 Personalized user experience: Create an account and enjoy personalized features like wishlists, order history, and personalized product recommendations. All of these features are designed to enhance your shopping experience. 
 
 
-Responsive customer support: Have questions or need help? Our customer support section provides easy access to frequently asked questions and communication options so you can get the help you need as quickly as possible. 
+Login Database: Our Login and sign-up has integrated with database so that every user can be monitered by admin.
 
 soon: Stay tuned as we finalize our backend integration, which will deliver a full-featured shopping experience, including a secure payment gateway and real-time order tracking. Thank you for visiting Shopping Knight. We look forward to meeting all your shopping needs with our official launch. In the meantime, take a look at the demo version of the interface and give us feedback to help us improve it.
 
@@ -42,4 +42,7 @@ Sample Images of Webpages
 
 
 ![7](https://github.com/user-attachments/assets/00acec72-f100-4e08-adfd-fc55828713c5)
+
+
+![Screenshot 2024-07-29 190921](https://github.com/user-attachments/assets/10482686-3c76-43ab-8541-24724ea32900)
 
